@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-<body>
+@extends('layout')
+@section('title', 'Contact')
+
+@section('content')
 <h1>hello world great contacts</h1>
-</body>
-</html>
+@endsection
