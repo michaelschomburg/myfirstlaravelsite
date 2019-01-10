@@ -12,15 +12,28 @@
 */
 
 Route::get('/', function () {
+    return view('welcome')->with([
+     'foo' => 'foobar',
+     'tasks' => [
+         'Go to the store',
+         'Go to the market',
+         'Go to work',
+         'Go to the concert'
+     ]
+    ]);
 
-    $tasks = [
+    /*  $tasks = [
         'Go to the store',
         'Go to the market',
-        'Go to work'
+        'Go to work',
+        'Go to the concert'
     ];
-    return view('welcome', [
-        'task' => $tasks
-        ]);
+    return view('welcome')->withTasks($tasks)->withFoo('foo');
+
+    /*return view('welcome', [
+        'tasks' => $tasks,
+        'foo' => 'foobar'
+    ]);*/
 });
 
 Route::get('/contact', function () {
