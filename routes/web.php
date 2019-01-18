@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome')->with([
+    return view('welcome', [
      'foo' => 'foobar',
      'tasks' => [
          'Go to the store',
